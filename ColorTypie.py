@@ -33,15 +33,15 @@ def play_game():
     # Starting the 60 seconds timer (Duration of the game)
     start_time = time.time()
     while time.time() - start_time < 60:
-        print("\nGet ready for the next color!")
+        print("\nGet ready to type the next color!")
         time.sleep(1)
         print("Go!")
         time.sleep(1)
         result = display_color_and_guess()
         if result:
             print("Correct!")
-            score += 5
-        elif result: 
+            score += 1
+        else: 
             print("Wrong!")
             score += 0
             
