@@ -4,7 +4,7 @@ import time
 print("Welcome to ColorTypie!")
 time.sleep(3)
 print("You'll have 60 seconds to type the colors displayed on screen")
-time.sleep(3)
+time.sleep(5)
 print("If you take too long, you will lose!")
 time.sleep(3)
 print("Good Luck :)!")
@@ -20,7 +20,7 @@ def display_color_and_guess():
     # TIMER
     start_time = time.time()
     
-    # Get player input with a timeout of 3 seconds
+    # Get player input with a timeout of 2 seconds
     while True:
         elapsed_time = time.time() - start_time
         if elapsed_time >= 2:
