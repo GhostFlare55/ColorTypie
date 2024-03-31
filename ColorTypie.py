@@ -3,14 +3,14 @@ import time
 
 print("Welcome to ColorTypie!")
 time.sleep(3)
-print("You'll have 60 seconds to type the colors displayed on screen")
+print("You'll have 1 min to type the colors displayed on screen")
 time.sleep(5)
-print("If you take too long, you will lose!")
+print("If you take too long, you will LOSE!")
 time.sleep(3)
 print("Good Luck :)!")
 time.sleep(5)
 #list of colors randomly shuffled
-colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'brown','white','black','turquoise','grey','magenta','cyan','pink','transparent']
+colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'brown','white','black','turquoise','grey','magenta','cyan','pink']
 
 # Getting the player's input
 def display_color_and_guess():
