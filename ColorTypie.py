@@ -1,26 +1,25 @@
 import random
 import time
 
-# Define the list of colors
+#list of colors randomly shuffled
 colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple']
 
-# Function to display a random color and get player input
+# Getting the player's input
 def display_color_and_guess():
-    # Choose a random color
+    # Random color Generator
     color = random.choice(colors)
-    print("Color:", color)
-    
-    # Start the timer
+    print("Color:", color) 
+    # TIMER
     start_time = time.time()
     
-    # Get player input with a timeout of 10 seconds
+    # Get player input with a timeout of 3 seconds
     while True:
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 10:
+        if elapsed_time >= 3:
             print("Time's up!")
             return None
         try:
-            guess = input("Your guess: ").lower()
+            guess = input("Type it quickly: ").lower()
             if guess == color:
                 return color
             else:
@@ -28,13 +27,12 @@ def display_color_and_guess():
         except EOFError:
             pass
 
-# Main function to play the game
 def play_game():
     score = 0
     
-    # Start the timer for the game (50 seconds)
+    # Starting the 60 seconds timer (Duration of the game)
     start_time = time.time()
-    while time.time() - start_time < 50:
+    while time.time() - start_time < 60:
         print("\nGet ready for the next color!")
         time.sleep(1)
         print("Go!")
@@ -43,9 +41,11 @@ def play_game():
         if result:
             print("Correct!")
             score += 5
-    
-    print("\nGame over!")
-    print("Your final score is:", score)
+        elif result: 
+            print("Wrong!")
+            score += 0
+            
+    print("\nTime's Up! Game Over!")
+    print("Here is your final score:", score)
 
-# Run the game
 play_game()
